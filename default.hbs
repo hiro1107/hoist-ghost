@@ -12,7 +12,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "styles/prism.css"}}" />
 
-    <script src="//use.typekit.net/gff5rgh.js"></script>
+    <script src="#"></script> <!-- Typekit config here -->
     <script>try{Typekit.load();}catch(e){}</script>
 
     {{ghost_head}}
@@ -21,7 +21,12 @@
     <sidebar>
         <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo"/></a>
 
-        
+        <div>
+            <h4>About</h4>
+            <p>LingualBox is an budget online English language school offering 1:1 25-minute class for as low as $2.
+            </p>
+            <a class="continue-reading full-width" href="https://www.lingualbox.com/signup/">Free Trial</a>
+        </div>
         {{!-- <div>
             <h4>Recomended Notes</h4>
             {{#foreach all}}
@@ -29,39 +34,36 @@
             {{/foreach}}
         </div> --}}
         
-        {{!-- <div>
+        <div>
             <h4>Topics</h4>
-            <a href="/tag/design/">Design</a>
-            <a href="/tag/development/">Development</a>
-            <a href="/tag/startups/">Startups</a>
-            <a href="/tag/strategy/">Stratergy</a>
-        </div> --}}
+            <a href="/tag/beginner/">Beginner</a>
+            <a href="/tag/intermediate/">Intermediate</a>
+            <a href="/tag/advanced/">Advanced</a>
+            <a href="/tag/study-techniques/">Study Techniques</a>
+        </div>
 
         <div>
             <h4>Subscribe</h4>
-            <a href="{{@blog.url}}/rss">RSS <i class="fa fa-rss"></i></a>
+            <a href="/rss">RSS <i class="fa fa-rss"></i></a>
+            {{! 
             <a href="#" id="showEmail" >Join our email newsletter <i class="fa fa-envelope-o"></i></a>
-
-               
-                        <form action="http://endgame.createsend.com/t/j/s/ngby/" method="post">
-                            <div class="input-group">
-                                <input class="form-control" input="" id="fieldEmail" name="cm-ngby-ngby" type="email" required="" placeholder="Email Address">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default colored" type="submit">Sign Up Now</button>
-                                </div>
-                            </div>
-                        </form>
-                      
+            <form action="#" method="post"> <!-- Your createsend link here -->
+                <div class="input-group">
+                    <input class="form-control" input="" id="fieldEmail" name="cm-ngby-ngby" type="email" required="" placeholder="Email Address">  <!-- You may need to change the name attribute -->
+                    <div class="input-group-btn">
+                        <button class="btn btn-default colored" type="submit">Sign Up Now</button>
+                    </div>
+                </div>
+            </form>
+            }}       
         </div>
-        
-
     </sidebar>
 
     <main>
         <!-- Everything else gets inserted here-->
         {{{body}}}
         <header class="copyright">
-            <div>All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</div>
+            <div>&copy; {{date format="YYYY"}} LingualBox, Inc.</div>
         </header>
     </main> 
 
@@ -79,17 +81,18 @@
    
     <!--Google Analytics-->
     <script>
-
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-41897788-2', 'hoistapps.com');
-      ga('send', 'pageview');
-
+        // Tracking Code Here
     </script>
     <!--Google Analytics-->
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=110017462502087";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

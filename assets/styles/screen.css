@@ -19,12 +19,13 @@ Hoist Notes theme, created by Eliot Slevin at Hoist.io
 2	Basic Layout
 ============================================================*/
 html {
-  background-color: #f2f2f2;
-  font-family: sans-serif; }
+  background-color: #f4f7f8;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+}
 
 body {
   margin: 0px;
-  font-size: 16px; }
+  font-size: 14px; }
 
 sidebar {
   width: 400px;
@@ -51,9 +52,14 @@ main {
     width: 300px; }
     sidebar div {
       padding-left: 2rem !important;
-      padding-right: 2rem !important; }
+      padding-right: 2rem !important; 
+    }
+    sidebar div.auto-padding {
+      margin-left: -2rem;
+    }
     sidebar form div {
-      padding: 0px !important; }
+      padding: 0px !important; 
+    }
 
   main {
     width: calc(100% - 300px);
@@ -73,18 +79,19 @@ main {
 4	Article Typography and Elements
 ============================================================*/
 h1, h2, h3, h4 {
-  font-family: "proxima-nova", sans-serif;
-  color: #2b93d8; }
+  color: #565a5c; }
 
 h1 {
-  font-size: 40px;
-  font-weight: 800;
+  font-size: 32px;
+  font-weight: normal;
   margin-top: 3.75rem;
   margin-bottom: 3.75rem; }
-
+h2.post-title {
+  color: #2b93d8;
+  font-weight: normal;
+}
 p, ul, ol, li, blockquote {
-  font-family: "expo-serif-pro", serif;
-  color: #333333; }
+  color: #565a5c; }
 
 li {
   padding-top: 5px;
@@ -94,11 +101,11 @@ li {
     margin-bottom: 0px; }
 
 p {
-  color: #333333;
+  color: #565a5c;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: 300;
-  font-size: 18px; }
+  font-size: 15px; }
 
 blockquote {
   margin: 0px;
@@ -114,7 +121,7 @@ hr {
   width: 40%;
   border: none;
   height: 1px;
-  background-color: #f2f2f2; }
+  background-color: #f4f7f8; }
 
 a {
   color: #2b93d8;
@@ -144,8 +151,8 @@ sidebar img {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: 100px;
-  margin-bottom: 100px; }
+  margin-top: 50px;
+  margin-bottom: 30px; }
 sidebar div {
   box-sizing: border-box;
   padding-left: 3.75rem;
@@ -155,22 +162,23 @@ sidebar div {
     display: block;
     width: 100%; }
   sidebar div h4 {
-    border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+    border-bottom: 1px solid #f15a22;
     padding-bottom: 10px;
     margin-bottom: 10px;
     margin-top: 0px;
-    font-weight: 600;
-    color: rgba(255, 0, 0, 0.5);
+    font-weight: 300;
+    color: #f15a22;
     font-size: 18px; }
   sidebar div a {
-    font-family: "proxima-nova", sans-serif;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
     color: #333333;
     text-decoration: none;
     padding: 8px;
+    transition-duration: 0.3s;
     margin-left: -8px; }
   sidebar div a:hover {
     background-color: white;
-    color: rgba(255, 0, 0, 0.5); }
+    color: #f15a22; }
 sidebar .show {
   opacity: 1 !important; }
 sidebar .input-group {
@@ -182,7 +190,7 @@ sidebar .input-group {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   sidebar .input-group input {
-    font-family: "proxima-nova", sans-serif;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
     font-size: 13px;
     border-style: none;
     padding: 12px;
@@ -193,7 +201,7 @@ sidebar .input-group {
   sidebar .input-group button {
     border-style: none;
     background-color: #2b93d8;
-    font-family: "proxima-nova", sans-serif;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
     font-size: 13px;
     color: white;
     padding: 12px;
@@ -206,12 +214,12 @@ sidebar .input-group {
 6	Page header structure and styling
 ============================================================*/
 header {
-  background-color: #f2f2f2;
+  background-color: #f4f7f8;
   margin-left: -3.75rem;
   margin-right: -3.75rem;
   margin-bottom: 3.75rem; }
   header span {
-    font-family: "proxima-nova", sans-serif;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     color: #666666;
@@ -229,9 +237,10 @@ header {
     margin: 0px;
     text-align: center;
     line-height: 140px;
-    font-size: 40px;
-    font-family: "proxima-nova", sans-serif;
-    color: #333333; }
+    font-size: 32px;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
+    font-weight: 300;
+    color: #565a5c; }
 
 .author-header {
   padding-top: 2rem;
@@ -247,11 +256,12 @@ header {
   .author-header p {
     text-align: center;
     max-width: 660px;
+    margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto; }
     .author-header p strong {
       font-size: 40px;
-      font-family: "proxima-nova", sans-serif; }
+      font-family: Helvetica,Arial,Verdana,sans-serif; }
 
 /*============================================================
 7	Post list styling
@@ -271,7 +281,7 @@ article.post {
   display: block;
   width: 100%;
   text-align: left;
-  font-family: "proxima-nova", sans-serif;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
   color: rgba(0, 0, 0, 0.5); }
 
 /*============================================================
@@ -279,7 +289,7 @@ article.post {
 ============================================================*/
 nav {
   padding-bottom: 3.75rem;
-  font-family: "proxima-nova", sans-serif;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   text-decoration: none;
@@ -295,13 +305,13 @@ nav {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px; }
   nav a:hover {
-    background-color: #f2f2f2;
+    background-color: #f4f7f8;
     text-decoration: none; }
 
 .copyright div {
   padding-bottom: 20px;
   line-height: 40px;
-  font-family: "expo-serif-pro", serif;
+  font-family: Helvetica,Arial,Verdana,sans-serif;
   font-size: 13px;
   opacity: 0.5;
   text-align: center;
@@ -312,7 +322,7 @@ nav {
   margin-bottom: 0px !important; }
 
 .author {
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f4f7f8;
   overflow: hidden; }
   .author img.profileimage {
     height: 70px;
@@ -324,7 +334,7 @@ nav {
   .author p {
     float: right;
     width: calc(100% - 70px - 2rem);
-    font-family: "proxima-nova", sans-serif;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
     font-size: 16px; }
     .author p strong {
       margin-bottom: 10px;
@@ -375,7 +385,7 @@ nav {
     background-color: #333333;
     overflow: hidden; }
     .color-blocks .sign-up .input-group input {
-      font-family: "proxima-nova", sans-serif;
+      font-family: Helvetica,Arial,Verdana,sans-serif;
       font-size: 13px;
       border-style: none;
       padding: 12px;
@@ -386,7 +396,7 @@ nav {
     .color-blocks .sign-up .input-group button {
       border-style: none;
       background-color: #2b93d8;
-      font-family: "proxima-nova", sans-serif;
+      font-family: Helvetica,Arial,Verdana,sans-serif;
       font-size: 13px;
       color: white;
       padding: 12px;
@@ -409,9 +419,9 @@ nav {
     position: static;
     height: auto; }
     sidebar img {
-      width: 100px;
-      margin-top: 50px;
-      margin-bottom: 50px; }
+      width: 150px;
+      margin-top: 30px;
+      margin-bottom: 0px; }
     sidebar div {
       display: none; }
 
@@ -431,3 +441,53 @@ nav {
     display: none; } }
 
 /*# sourceMappingURL=screen.css.map */
+
+.text-muted {
+  color: #82888a;
+}
+
+.font-small {
+  font-size: 13px;
+}
+
+span.author-bio {
+  font-size: 14px;
+  margin-top: 2rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.continue-reading {
+  -webkit-transition: background 100ms ease-in-out;
+  transition: background 100ms ease-in-out;
+  background: #57bb89;
+  border-radius: 3px;
+  border: 1px solid #57bb89;
+  color: white;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+}
+
+.continue-reading:hover {
+  color: white;
+  background-color: #108d4c;
+  border-color: #0f8447;
+  text-decoration: none;
+}
+
+.full-width {
+  width: 90%;
+}
+
+.small-left-margin {
+  margin-left: 5px;
+}
+
+sidebar p {
+  line-height: 1.25rem;
+  margin-top: 0;
+}
